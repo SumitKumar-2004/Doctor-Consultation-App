@@ -1,4 +1,5 @@
 "use client";
+
 import { userAuthStore } from "@/store/authStore";
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useEffect } from "react";
@@ -18,16 +19,13 @@ const SuccessPage = () => {
       try {
         const user = JSON.parse(decodeURIComponent(userStr));
 
-        // Add type to user object
         const userData = {
           ...user,
           type: type as "doctor" | "patient",
         };
 
-        // Set user in auth store
         setUser(userData, token);
 
-        // Redirect to appropriate dashboard
         if (userData.isVerified) {
           if (type === "doctor") {
             router.push("/doctor/dashboard");
