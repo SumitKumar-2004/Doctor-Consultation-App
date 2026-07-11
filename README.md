@@ -103,19 +103,19 @@ The Doctor Consultation App is a comprehensive telemedicine platform designed to
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Frontend (Next.js)                        │
+│                        Frontend (Next.js)                       │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │ Pages: Auth | Dashboard | Doctor List | Consultations  │   │
-│  │ Components: UI Components via Radix UI & Lucide         │   │
-│  │ State: Zustand Store for global state management        │   │
+│  │ Pages: Auth | Dashboard | Doctor List | Consultations    │   │
+│  │ Components: UI Components via Radix UI & Lucide          │   │
+│  │ State: Zustand Store for global state management         │   │
 │  └──────────────────────────────────────────────────────────┘   │
-└─────────────────────────┬──────────────────────────────────────┘
+└─────────────────────────┬───────────────────────────────────────┘
                           │ HTTP/REST API
                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                   Backend API (Express.js)                       │
+┌────────────────────────────────────────────────────────────────┐
+│                   Backend API (Express.js)                     │
 │  ┌────────────────────────────────────────────────────────┐    │
-│  │ Routes:                                                 │    │
+│  │ Routes:                                                │    │
 │  │ • /api/auth - Authentication & OAuth                   │    │
 │  │ • /api/doctor - Doctor profiles & management           │    │
 │  │ • /api/patient - Patient profiles & management         │    │
@@ -123,7 +123,7 @@ The Doctor Consultation App is a comprehensive telemedicine platform designed to
 │  │ • /api/payment - Payment processing                    │    │
 │  └────────────────────────────────────────────────────────┘    │
 │  ┌────────────────────────────────────────────────────────┐    │
-│  │ Middleware:                                             │    │
+│  │ Middleware:                                            │    │
 │  │ • Authentication (JWT verification)                    │    │
 │  │ • Authorization (Role-based access)                    │    │
 │  │ • Validation (Input sanitization)                      │    │
@@ -132,8 +132,8 @@ The Doctor Consultation App is a comprehensive telemedicine platform designed to
 └─────────────────────────┬──────────────────────────────────────┘
                           │ MongoDB Driver
                           ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    MongoDB Database                              │
+┌────────────────────────────────────────────────────────────────┐
+│                    MongoDB Database                            │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
 │  │  Doctors     │  │  Patients    │  │ Appointments │          │
 │  ├──────────────┤  ├──────────────┤  ├──────────────┤          │
@@ -141,22 +141,22 @@ The Doctor Consultation App is a comprehensive telemedicine platform designed to
 │  │ availability │  │ medical info │  │ payment info │          │
 │  │ fees         │  │ records      │  │ consultation │          │
 │  └──────────────┘  └──────────────┘  └──────────────┘          │
-└─────────────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────────────┘
 
-┌─────────────────────────────────────────────────────────────────┐
-│                  External Services Integration                   │
-│  ┌─────────────────────────┬─────────────────────────────┐     │
-│  │   Stripe Payment API    │   Zego Video SDK             │     │
-│  │   • Payment Processing  │   • Video Conferencing       │     │
-│  │   • Payment Intent      │   • Room Management          │     │
-│  │   • Transaction Confirm │   • Media Streaming          │     │
-│  └─────────────────────────┴─────────────────────────────┘     │
+┌────────────────────────────────────────────────────────────────┐
+│                  External Services Integration                 │
+│  ┌─────────────────────────┬──────────────────────────────┐    │
+│  │   Stripe Payment API    │   Zego Video SDK             │    │
+│  │   • Payment Processing  │   • Video Conferencing       │    │
+│  │   • Payment Intent      │   • Room Management          │    │
+│  │   • Transaction Confirm │   • Media Streaming          │    │
+│  └─────────────────────────┴──────────────────────────────┘    │
 │  ┌─────────────────────────┐                                   │
 │  │   Google OAuth 2.0      │                                   │
 │  │   • Social Login        │                                   │
 │  │   • Profile Mapping     │                                   │
 │  └─────────────────────────┘                                   │
-└─────────────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────────────┘
 ```
 
 ### Data Flow Architecture
